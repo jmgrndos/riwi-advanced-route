@@ -1,0 +1,34 @@
+@startuml
+left to right direction
+
+actor Admin
+actor Partner
+
+rectangle "LibroNova Library Management System" {
+  usecase "Manage Books" as UC_MANAGE_BOOKS
+  usecase "Manage Users" as UC_MANAGE_USERS
+  usecase "Manage Loans" as UC_MANAGE_LOANS
+  usecase "Search Books" as UC_SEARCH_BOOKS
+  usecase "Borrow Book" as UC_BORROW_BOOK
+  usecase "Return Book" as UC_RETURN_BOOK
+  usecase "View Borrowed Books" as UC_VIEW_BORROWED
+  usecase "Login" as UC_LOGIN
+  usecase "Export Data" as UC_EXPORT_DATA
+}
+
+Admin -- UC_MANAGE_BOOKS
+Admin -- UC_MANAGE_USERS
+Admin -- UC_MANAGE_LOANS
+Admin -- UC_EXPORT_DATA
+
+Partner -- UC_SEARCH_BOOKS
+Partner -- UC_BORROW_BOOK
+Partner -- UC_RETURN_BOOK
+Partner -- UC_VIEW_BORROWED
+
+(UC_MANAGE_BOOKS) .> (UC_SEARCH_BOOKS) : extends
+(UC_BORROW_BOOK) ..> (UC_LOGIN) : includes
+(UC_RETURN_BOOK) ..> (UC_LOGIN) : includes
+(UC_VIEW_BORROWED) ..> (UC_LOGIN) : includes
+
+@enduml

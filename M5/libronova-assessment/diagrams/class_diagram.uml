@@ -1,0 +1,161 @@
+@startuml
+'left to right direction
+
+package "Domain" {
+  class User {
+    - id: int
+    - name: String
+    - email: String
+    - password: String
+    - role: String
+  }
+
+  class Admin extends User {
+  }
+
+  class Partner extends User {
+  }
+
+  class Book {
+    - id: int
+    - title: String
+    - author: String
+    - stock: int
+  }
+
+  class Loan {
+    - id: int
+    - bookId: int
+    - userId: int
+    - loanDate: Date
+    - returnDate: Date
+  }
+}
+
+package "DAO" {
+  interface BookDAO {
+    + addBook(book: Book): void
+    + updateBook(book: Book): void
+    + deleteBook(id: int): void
+    + findBookById(id: int): Book
+    + findAllBooks(): List<Book>
+  }
+
+  class BookDAOImpl implements BookDAO {
+  }
+
+  interface LoanDAO {
+    + addLoan(loan: Loan): void
+    + updateLoan(loan: Loan): void
+    + findLoanById(id: int): Loan
+    + findLoansByUserId(userId: int): List<Loan>
+  }
+
+  class LoanDAOImpl implements LoanDAO {
+  }
+
+  interface UserDAO {
+    + addUser(user: User): void
+    + updateUser(user: User): void
+    + deleteUser(id: int): void
+    + findUserById(id: int): User
+    + findUserByEmail(email: String): User
+    + findAllUsers(): List<User>
+  }
+
+  class UserDAOImpl implements UserDAO {
+  }
+}
+
+package "Service" {
+  interface BookService {
+    + createBook(title: String, author: String, stock: int): void
+    + updateBook(id: int, title: String, author: String, stock: int): void
+    + deleteBook(id: int): void
+    + getBookById(id: int): Book
+    + getAllBooks(): List<Book>
+  }
+
+  class BookServiceImpl implements BookService {
+  }
+
+  interface LoanService {
+    + createLoan(bookId: int, userId: int): void
+    + returnLoan(loanId: int): void
+    + getLoansByUserId(userId: int): List<Loan>
+  }
+
+  class LoanServiceImpl implements LoanService {
+  }
+
+  interface UserService {
+    + createUser(name: String, email: String, password: String, role: String): void
+    + updateUser(id: int, name: String, email: String, role: String): void
+    + deleteUser(id: int): void
+    + getUserById(id: int): User
+    + getAllUsers(): List<User>
+  }
+
+  class UserServiceImpl implements UserService {
+  }
+
+  interface AuthService {
+    + login(email: String, password: String): User
+  }
+
+  class AuthServiceImpl implements AuthService {
+  }
+}
+
+package "Controller" {
+  interface AdminController {
+  }
+  class AdminControllerImpl implements AdminController {
+  }
+
+  interface PartnerController {
+  }
+  class PartnerControllerImpl implements PartnerController {
+  }
+
+  interface AuthController {
+  }
+  class AuthControllerImpl implements AuthController {
+  }
+
+  class MainController {
+  }
+}
+
+package "View" {
+  class AdminView {
+  }
+  class PartnerView {
+  }
+  class AuthView {
+  }
+  class MainView {
+  }
+}
+
+BookServiceImpl --> BookDAO
+LoanServiceImpl --> LoanDAO
+UserServiceImpl --> UserDAO
+AuthServiceImpl --> UserDAO
+
+AdminControllerImpl --> BookService
+AdminControllerImpl --> UserService
+AdminControllerImpl --> LoanService
+PartnerControllerImpl --> BookService
+PartnerControllerImpl --> LoanService
+AuthControllerImpl --> AuthService
+
+AdminView --> AdminController
+PartnerView --> PartnerController
+AuthView --> AuthController
+MainView --> MainController
+
+Loan "1" -- "1" User
+Loan "1" -- "1" Book
+
+@enduml

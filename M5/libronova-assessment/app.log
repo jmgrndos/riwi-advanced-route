@@ -1,0 +1,31 @@
+[2025-10-14 13:25:14] [INFO] Database connection successful
+[2025-10-14 13:25:14] [INFO] Application started
+[2025-10-14 13:25:15] [INFO] Application finished
+[2025-10-14 13:34:17] [INFO] Database connection successful
+[2025-10-14 13:34:17] [INFO] Application started
+[2025-10-14 13:34:18] [INFO] Application finished
+[2025-10-14 13:34:27] [INFO] Database connection successful
+[2025-10-14 13:34:27] [INFO] Application started
+[2025-10-14 13:34:38] [INFO] User 'admin@example.com' logged in successfully.
+[2025-10-14 13:34:44] [INFO] All books exported to books.csv
+[2025-10-14 13:34:53] [INFO] Application finished
+[2025-10-14 13:34:59] [INFO] Database connection successful
+[2025-10-14 13:34:59] [INFO] Application started
+[2025-10-14 13:35:11] [INFO] User 'admin@example.com' logged in successfully.
+[2025-10-14 13:35:22] [WARN] Update stock failed: Book with id '123123' not found.
+[2025-10-14 13:35:28] [INFO] Stock for book with id '1' updated successfully.
+[2025-10-14 13:35:48] [INFO] Database connection successful
+[2025-10-14 13:35:48] [INFO] Application started
+[2025-10-14 13:35:57] [INFO] User 'admin@example.com' logged in successfully.
+[2025-10-14 13:36:02] [INFO] All books exported to books.csv
+[2025-10-14 13:36:17] [INFO] Database connection successful
+[2025-10-14 13:36:17] [INFO] Application started
+[2025-10-14 13:36:24] [INFO] User 'admin@example.com' logged in successfully.
+[2025-10-14 13:36:31] [INFO] Status for user with id '1' updated successfully.
+[2025-10-14 13:36:49] [INFO] Database connection successful
+[2025-10-14 13:36:49] [INFO] Application started
+[2025-10-14 13:37:00] [INFO] User 'admin@example.com' logged in successfully.
+[2025-10-14 13:37:04] [INFO] Status for user with id '1' updated successfully.
+[2025-10-14 13:37:23] [INFO] Database connection successful
+[2025-10-14 13:37:23] [INFO] Application started
+[2025-10-14 13:37:32] [INFO] User 'admin@example.com' logged in successfully.

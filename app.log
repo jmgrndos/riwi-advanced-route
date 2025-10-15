@@ -1,0 +1,5 @@
+[2025-10-14 21:40:09] [ERROR] Database connection failed: No suitable driver found for jdbc:postgresql://localhost:5432/libronova_assessment_db
+[2025-10-14 21:41:28] [ERROR] Database connection failed: FATAL: database "libronova_assessment_db" does not exist
+[2025-10-14 21:46:05] [INFO] Database connection successful
+[2025-10-14 21:46:05] [INFO] Application started
+[2025-10-14 21:46:06] [INFO] Application finished
