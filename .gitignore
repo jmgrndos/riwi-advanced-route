@@ -2,4 +2,9 @@
 
 ## Module 5 Week 3
 M5/M5W3/src/resources/db.properties
-M5/M5W3/lib
+
+## Module 5 Week 5
+M5/M5W3/src/config/db.properties
+
+## Assessment
+M5/Assessment/src/config/db.properties
