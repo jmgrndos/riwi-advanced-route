@@ -10,5 +10,7 @@ The content is organized by modules (e.g., `M5`) and the weekly user stories wit
 M5/               # Module 5
 ├── M5W1/         # Week 1 User story.
 ├── M5W2/         # Week 2 User story.
-└── M5W3/         # Week 3 User story.
+├── M5W3/         # Week 3 User story.
+├── M5W5/         # Week 5 User story.
+└── Assessment/   # Assessment
 ```
